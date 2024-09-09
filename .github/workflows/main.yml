@@ -4,18 +4,34 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '8.0.x'
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build project
-      run: dotnet build --no-restore
+
+    # Restoring dependencies using dotnet CLI
+    - name: Install .NET dependencies
+      run: dotnet restore path/to/your-solution.sln # Ensure this points to the correct path
+
+    - name: Build .NET Core project
+      run: dotnet build --no-restore path/to/your-solution.sln # Point to the solution or project file
+
+    - name: Setup .NET Framework
+      uses: microsoft/setup-msbuild@v1
+
+    # Restore dependencies for .NET Framework
+    - name: Install NuGet dependencies
+      run: nuget restore path/to/your-solution.sln # Adjust path if necessary
+
+    - name: Build .NET Framework project
+      run: msbuild path/to/your-solution.sln /p:Configuration=Release
 
