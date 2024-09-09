@@ -1,0 +1,25 @@
+name: .NET Framework CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET Framework
+      uses: microsoft/setup-msbuild@v1
+
+    # Restore NuGet dependencies using the correct path
+    - name: Install NuGet dependencies
+      run: nuget restore "C:/Users/jorda/Documents/test script/Prog3bTestTwo/GitActionsTester/GitActionsTester.sln"
+
+    # Build project using the correct path
+    - name: Build project
+      run: msbuild "C:/Users/jorda/Documents/test script/Prog3bTestTwo/GitActionsTester/GitActionsTester.sln" /p:Configuration=Release
