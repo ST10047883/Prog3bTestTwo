@@ -20,7 +20,7 @@ jobs:
 
     # Restoring dependencies using dotnet CLI
     - name: Install .NET dependencies
-      run: dotnet restore C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln # Ensure this points to the correct path
+      run: dotnet restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln" # Ensure this points to the correct path
 
     - name: Build .NET Core project
       run: dotnet build --no-restore C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln # Point to the solution or project file
