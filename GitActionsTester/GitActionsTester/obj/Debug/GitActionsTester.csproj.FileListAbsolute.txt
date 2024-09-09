@@ -1,0 +1,7 @@
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\bin\Debug\GitActionsTester.exe.config
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\bin\Debug\GitActionsTester.exe
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\bin\Debug\GitActionsTester.pdb
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\obj\Debug\GitActionsTester.csproj.AssemblyReference.cache
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\obj\Debug\GitActionsTester.csproj.CoreCompileInputs.cache
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\obj\Debug\GitActionsTester.exe
+C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester\obj\Debug\GitActionsTester.pdb
