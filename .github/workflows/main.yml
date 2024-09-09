@@ -20,18 +20,18 @@ jobs:
 
     # Restoring dependencies using dotnet CLI
     - name: Install .NET dependencies
-      run: dotnet restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln" # Ensure this points to the correct path
+      run: dotnet restore C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln # Ensure this points to the correct path
 
     - name: Build .NET Core project
-      run: dotnet build --no-restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln" # Point to the solution or project file
+      run: dotnet build --no-restore C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln # Point to the solution or project file
 
     - name: Setup .NET Framework
       uses: microsoft/setup-msbuild@v1
 
     # Restore dependencies for .NET Framework
     - name: Install NuGet dependencies
-      run: nuget restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln" # Adjust path if necessary
+      run: nuget restore C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln # Adjust path if necessary
 
     - name: Build .NET Framework project
-      run: msbuild "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln" /p:Configuration=Release
+      run: msbuild C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester.sln /p:Configuration=Release
 
