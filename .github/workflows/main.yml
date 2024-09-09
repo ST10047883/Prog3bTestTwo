@@ -13,14 +13,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: List files for debugging
+      run: dir "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester"  # This will help confirm the file location
+
     - name: Setup .NET Framework
       uses: microsoft/setup-msbuild@v1
 
-    # Restoring NuGet dependencies using the correct path to the solution file
+    # Restore NuGet dependencies
     - name: Install NuGet dependencies
-      run: nuget restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln"  # Adjust path if necessary
+      run: nuget restore "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln"  # Ensure this is the correct path
 
-    # Building the .NET project
+    # Build the project
     - name: Build project
       run: msbuild "C:\Users\jorda\Documents\test script\Prog3bTestTwo\GitActionsTester\GitActionsTester.sln" /p:Configuration=Release
-
